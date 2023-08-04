@@ -43,7 +43,8 @@ const BasketList = (props) => {
       </ul>
       <div className='basket-footer deep-purple'>
         <span className='total-price white-text'>
-          Общая стоимость: {totalPrice} руб.
+          Общая стоимость:
+          <br /> {totalPrice} руб.
         </span>
         <button className='btn btn-small pink accent-1'> Оформить заказ</button>
       </div>

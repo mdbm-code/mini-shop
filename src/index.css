@@ -65,12 +65,14 @@ nav {
 }
 .basket-footer {
   position: relative;
-  height: 50px;
+  min-height: 50px;
+  padding-left: 20px;
 }
 
 .basket-footer .total-price {
-  line-height: 50px;
-  margin-left: 20px;
+  line-height: 5px;
+  padding-right: 170px;
+  vertical-align: middle;
 }
 
 .basket-footer button {
@@ -79,10 +81,30 @@ nav {
   bottom: 0.5rem;
 }
 
+.collection .collection-item.avatar {
+  min-height: 84px;
+  padding-left: 20px !important;
+  padding-right: 40px !important;
+  position: relative;
+}
+
+.collection-item .counter {
+  padding-top: 10px;
+}
+
 .counter button {
+  cursor: pointer;
+}
+
+.counter .quantity {
   margin-left: 5px;
   margin-right: 5px;
-  cursor: pointer;
+}
+.counter .price {
+  margin-left: 10px;
+}
+.secondary-content .delete-item {
+  color: #4a148c;
 }
 
 @keyframes show {

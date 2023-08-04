@@ -9,25 +9,37 @@ const BasketItem = (props) => {
     removeGoodFromBasket = Function.prototype,
     changeQuantity = Function.prototype,
   } = props;
+
   return (
-    <li className='collection-item' id={id}>
-      {name} :{' '}
-      <span className='counter'>
-        <button onClick={() => changeQuantity(id, -1)}>-</button>
-        {quantity} шт.
-        <button onClick={() => changeQuantity(id, 1)}>+</button>
-      </span>{' '}
-      х {price} руб.
-      <span className='secondary-content'>
+    <li className='collection-item avatar'>
+      <span className='title'>{name}</span>
+      <p className='counter'>
+        <button
+          className='btn btn-small pink accent-1'
+          onClick={() => changeQuantity(id, -1)}
+        >
+          <i className='material-icons'>remove</i>
+        </button>
+        <span className='quantity'>{quantity} шт.</span>
+        <button
+          className='btn btn-small pink accent-1'
+          onClick={() => changeQuantity(id, 1)}
+        >
+          <i className='material-icons'>add</i>
+        </button>
+        <span className='price'>
+          х {price} руб.= {price * quantity} руб.
+        </span>
+      </p>
+      <a href='#!' className='secondary-content'>
         <i
           onClick={() => removeGoodFromBasket(id)}
           style={{ cursor: 'pointer' }}
-          className='material-icons'
+          className='material-icons delete-item'
         >
           clear
         </i>
-      </span>
-      <span className='right'>{price * quantity}</span>
+      </a>
     </li>
   );
 };
