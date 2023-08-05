@@ -134,3 +134,9 @@ nav {
     transform: translateY(0rem);
   }
 }
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  #toast-container {
+    bottom: unset !important;
+  }
+}
